@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  </head>
+  <body>
+    <h1>JS DOM</h1>
+    <h2> WHAT IS THIS ?</h2>
+
+    <p> I would like to share with you this simple <strong>page</strong> , where applied some JS DOM stuffs.<br> How it works:</p>
+<ul>
+  <li id ="highlight">You click on first button, it changes h1</li>
+  <li class="bolded">You click on the second button, it change a dog image to a cow</li>
+  <li class="bolded">-You click on the third button, it change a cat image to a goat</li>
+  <li class="bolded">-Enjoy!!</li>
+</ul>
+
+<div class="container">
+  <h3>A dog</h3><img src="https://www.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg"  width= "35%" height="35%">
+  <h3 >A cat</h3><img src="https://images.immediate.co.uk/production/volatile/sites/4/2018/08/iStock_000044061370_Medium-fa5f8aa.jpg?quality=45&crop=5px,17px,929px,400px&resize=960,413" width= "35%" height="35%">
+</div>
+
+<br>
+
+<button class="btn btn-success" >Click here to change H1 (JS Crash Course) Properties</button>
+
+<br>
+
+<br>
+
+  <button class="btn btn-danger" >Click  here to change  dog image to cow</button>
+</div>
+<br>
+<br>
+
+<div>
+  <button class="btn btn-primary" >Click  here to change  cat image to goat</button>
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+  var h1 = document.querySelector("h1");
+var button = document.querySelector("button");
+button.addEventListener("click", function(){
+    h1.style.background = "red";
+    h1.style.border = "10px solid green";
+})
+
+var headings = document.querySelectorAll("h3");
+var dogCow = headings[0];
+var catGoat = headings[1];
+
+var images = document.querySelectorAll("img");
+
+var dog = images[0];
+
+var cat = images[1];
+
+
+var butt = document.querySelector(".btn.btn-danger");
+butt.addEventListener("click", function(){
+  dog.srcset ="http://res.freestockphotos.biz/pictures/10/10201-cows-in-a-field-pv.jpg";
+  headings[0].textContent ="Cows";
+
+})
+
+var butto = document.querySelector(".btn.btn-primary");
+butto.addEventListener("click", function(){
+  cat.srcset ="https://upload.wikimedia.org/wikipedia/commons/f/ff/Domestic_goat_kid_in_capeweed.jpg";
+  headings[1].textContent ="A goat";
+})
+
+</script>
+
+
+
+</body>
+</html>
