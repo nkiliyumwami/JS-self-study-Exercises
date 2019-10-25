@@ -17,11 +17,19 @@ var dog = images[0];
 
 var cat = images[1];
 
+//When you click on the first button you can change almost everything with JS !!
+
+var list = document.querySelector("ul");
+var paragraph = document.querySelector("p");
+var body = document.querySelector("body");
 var butt = document.querySelector(".btn.btn-danger");
-butt.addEventListener("click", function() {
+butt.addEventListener("click", function imageChanger1() {
   dog.srcset =
     "http://res.freestockphotos.biz/pictures/10/10201-cows-in-a-field-pv.jpg";
   headings[0].textContent = "Cows";
+  body.style.background = "beige";
+  paragraph.style.color = "blue";
+  list.style.fontSize = "20px";
 });
 
 var butto = document.querySelector(".btn.btn-primary");
